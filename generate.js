@@ -1,7 +1,16 @@
+// --------------------------------------------------
+// Set your desired parameters here
+
+const numberOfTransactions = 10000;
+const earliestTransactionDate = new Date(2019, 7, 2);
+const latestTransactionDate = new Date(2020, 6, 29);
 const availableDescriptions = [
   'Coles',
-  'Woolies'
-]
+  'Woolies',
+  'TelsMe'
+];
+
+// --------------------------------------------------
 
 function randomDate(start, end) {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
@@ -57,4 +66,4 @@ function generateQifOutput(transactions) {
 }
 
 generateQifOutput(
-  generateRandomTransactions(100, new Date(2019, 10, 1), new Date(2019, 12, 30)));
+  generateRandomTransactions(numberOfTransactions, earliestTransactionDate, latestTransactionDate));
