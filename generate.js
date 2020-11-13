@@ -1,9 +1,23 @@
+const availableDescriptions = [
+  'Coles',
+  'Woolies'
+]
+
 function randomDate(start, end) {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 }
 
+function randomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function randomChoice(arr) {
+  var idx = randomInt(arr.length);
+  return arr[idx];
+}
+
 function generateDescription() {
-  return 'Coles';
+  return randomChoice(availableDescriptions);
 }
 
 function generateRandomTransaction(startDate, endDate) {
@@ -43,4 +57,4 @@ function generateQifOutput(transactions) {
 }
 
 generateQifOutput(
-  generateRandomTransactions(2, new Date(2019, 1, 1), new Date(2020, 10, 30)));
+  generateRandomTransactions(100, new Date(2019, 10, 1), new Date(2019, 12, 30)));
