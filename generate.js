@@ -5,9 +5,10 @@ const numberOfTransactions = 10000;
 const earliestTransactionDate = new Date(2019, 7, 2);
 const latestTransactionDate = new Date(2020, 6, 29);
 const availableDescriptions = [
-  'Coles',
-  'Woolies',
-  'TelsMe'
+  'aldi_shopping_bag',
+  'target_elemental_fire',
+  'george_emporio_armani',
+  'santina_forraging_for_grubs'
 ];
 
 // --------------------------------------------------
